@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane hgap="4.0" prefHeight="278.0" prefWidth="202.0" vgap="4.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.day3.gui.FoodFormController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <ChoiceBox fx:id="cmbFoodType" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.columnSpan="2" />
+        <Label text="Название" GridPane.rowIndex="1" />
+        <TextField fx:id="txtFoodTitle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Кол-во колорий" GridPane.rowIndex="2" />
+        <TextField fx:id="txtFoodKkal" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <VBox prefHeight="25.0" prefWidth="194.0" spacing="8.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+            <children>
+                <VBox fx:id="fruitPane">
+                    <children>
+                        <CheckBox fx:id="chkIsFresh" mnemonicParsing="false" text="свежее" />
+                    </children>
+                </VBox>
+                <HBox fx:id="chocolatePane" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                    <children>
+                        <Label text="Тип">
+                            <padding>
+                                <Insets top="4.0" />
+                            </padding></Label>
+                        <ChoiceBox fx:id="cmbChocolateType" maxWidth="1.7976931348623157E308" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <VBox fx:id="cookiePane" prefHeight="200.0" prefWidth="100.0" spacing="4.0">
+                    <children>
+                        <CheckBox fx:id="chkWithSugar" mnemonicParsing="false" text="с сахаром" />
+                        <CheckBox fx:id="chkWithPoppy" mnemonicParsing="false" text="с маком" />
+                        <CheckBox fx:id="chkWithSesame" mnemonicParsing="false" text="с кунжутом" />
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </VBox>
+        <Button mnemonicParsing="false" text="Сохранить" GridPane.halignment="LEFT" GridPane.rowIndex="4" onAction="#onSaveClick"/>
+        <Button mnemonicParsing="false" text="Отмена" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" onAction="#onCancelClick" />
+    </children>
+    <padding>
+        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+    </padding>
+</GridPane>

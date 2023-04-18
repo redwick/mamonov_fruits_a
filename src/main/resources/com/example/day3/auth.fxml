@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.day3.gui.AuthController">
+    <children>
+        <Label layoutX="61.0" layoutY="65.0" text="MVP">
+            <font>
+                <Font name="Calibri" size="22.0" />
+            </font>
+        </Label>
+        <TextField fx:id="numField" layoutX="232.0" layoutY="160.0" onKeyPressed="#numKey"/>
+        <TextField fx:id="codeField" disable="true" layoutX="232.0" layoutY="227.0" prefHeight="25.0" prefWidth="102.0"/>
+        <PasswordField fx:id="passwordField" disable="true" layoutX="232.0" layoutY="194.0" onKeyPressed="#passKey"/>
+        <Label layoutX="160.0" layoutY="164.0" text="Номер">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="158.0" layoutY="198.0" text="Пароль">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="160.0" layoutY="231.0" text="Код">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="clearBtn" layoutX="232.0" layoutY="303.0" mnemonicParsing="false" onAction="#onCancel" text="Отмена" />
+        <Button fx:id="enterBtn" disable="true" layoutX="329.0" layoutY="303.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="51.0" text="Вход" />
+        <Button fx:id="regenerateBtn" disable="true" layoutX="342.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" onAction="#onRegenerate" />
+        <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="label" layoutX="232.0" layoutY="270.0" prefHeight="17.0" prefWidth="149.0" />
+    </children>
+</AnchorPane>
